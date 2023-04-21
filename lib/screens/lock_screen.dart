@@ -49,22 +49,53 @@ class _LockScreenState extends State<LockScreen> {
                       alignment: Alignment.center,
                       children: [
                         Positioned(
-                          top: 150.h,
-                          child: Transform.scale(
-                            scale: 4,
-                            child: DigitalClock(
-                              is24HourTimeFormat: true,
-                              showSecondsDigit: false,
+                          top: 157.h,
+                          child: Transform.translate(
+                            offset: const Offset(18, 0),
+                            child: Transform.scale(
+                              scale: 4,
+                              child: Container(
+                                width: 85,
+                                height: 30,
+                                decoration: BoxDecoration(
+                                  color: kBlack10.withOpacity(0.2),
+                                  borderRadius: BorderRadius.circular(6),
+                                  border: Border.all(
+                                    color: kBlack10.withOpacity(0.2),
+                                  ),
+                                ),
+                              ),
                             ),
                           ),
                         ),
                         Positioned(
-                            top: 300.h,
+                          top: 150.h,
+                          child: Transform.translate(
+                            offset: const Offset(30, 0),
+                            child: Transform.scale(
+                              scale: 4,
+                              child: DigitalClock(
+                                is24HourTimeFormat: true,
+                                //showSecondsDigit: false,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                            bottom: 24.h,
+                            right: 24.h,
+                            child: CustomIconButton(
+                              icon: Icons.settings_outlined,
+                              size: 28,
+                              onPressed: () {},
+                            )),
+                        Positioned(
+                            top: 320.h,
                             child: Column(
                               children: [
                                 Container(
-                                  height: 150,
-                                  width: 150,
+                                  height: 130,
+                                  width: 130,
                                   decoration: BoxDecoration(
                                     boxShadow: [
                                       BoxShadow(
@@ -80,7 +111,7 @@ class _LockScreenState extends State<LockScreen> {
                                     ),
                                   ),
                                 ),
-                                const SizedBox(height: 80),
+                                const SizedBox(height: 60),
                                 Form(
                                   key: _formKey,
                                   child: Row(
@@ -89,10 +120,11 @@ class _LockScreenState extends State<LockScreen> {
                                         width: 200,
                                         child: TextFormField(
                                           onChanged: (newValue) {
-                                            if (newValue == "Kurukshetra") {
+                                            if (newValue.toLowerCase().trim() ==
+                                                "kurukshetra") {
                                               Future.delayed(
                                                   const Duration(
-                                                      milliseconds: 500), () {
+                                                      milliseconds: 300), () {
                                                 context.go('/main');
                                               });
                                             }

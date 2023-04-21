@@ -79336,7 +79336,7 @@ a2=a0.b
 a2===$&&A.b()
 a0=a0.c
 a0===$&&A.b()
-return new A.m2(a1,a2,a0,"Flutter Demo",b,a,B.yX,!1,j,k)},
+return new A.m2(a1,a2,a0,"K! | Web Design",b,a,B.yX,!1,j,k)},
 $S:459}
 A.te.prototype={}
 A.hY.prototype={}

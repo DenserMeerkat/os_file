@@ -73,7 +73,7 @@ class _MyAppState extends State<MyApp> {
                     PointerDeviceKind.unknown
                   },
                 ),
-                title: 'Flutter Demo',
+                title: 'K! | Web Design',
                 theme: FlexThemeData.light(scheme: FlexScheme.deepPurple),
                 darkTheme: FlexThemeData.dark(scheme: FlexScheme.deepPurple),
                 themeMode: ThemeMode.dark,
